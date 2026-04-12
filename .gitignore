@@ -1,0 +1,15 @@
+# Datasets (Too large for GitHub/Deployment)
+train/
+valid/
+
+# Checkpoints and Logs
+.ipynb_checkpoints/
+__pycache__/
+training_hist.json
+training_hist-checkpoint.json
+
+# Redundant Model Formats
+trained_plant_disease_model.keras
+
+# OS Files
+.DS_Store
