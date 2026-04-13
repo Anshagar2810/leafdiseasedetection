@@ -356,7 +356,7 @@ def model_prediction(test_image, filename=None):
 # 1. Hero Section
 st.markdown("""
 <div class="hero-container">
-    <h1 class="hero-title">AgroScan AI</h1>
+    <div class="hero-title">AgroScan AI</div>
     <p class="hero-subtitle">
         Empowering farmers with the world's most advanced AI-driven plant diagnostics.<br>
         Using state-of-the-art Convolutional Neural Networks to detect pathogens with surgical precision.<br>
@@ -511,6 +511,6 @@ st.markdown("""
 <div style="text-align: center; color: #90a4ae; padding: 6rem 0;">
     <p style="font-size: 1.2rem;">Empowering farmers with the AI-driven future.</p>
     <p style="font-weight: 800; color: #1b5e20;">AGROSCAN AI © 2026</p>
-    <p style="font-size: 0.8rem;">Architecture by Ansh | Intelligence by TensorFlow</p>
+    <p style="font-size: 0.8rem;">Architecture by Agroscan | Intelligence by TensorFlow</p>
 </div>
 """, unsafe_allow_html=True)
