@@ -77,21 +77,45 @@ st.markdown("""
     .stApp::before {
         content: "🌿";
         position: fixed;
-        top: 10%;
-        left: 5%;
-        font-size: 10rem;
-        opacity: 0.03;
-        transform: rotate(-15deg);
+        top: 5%;
+        left: 3%;
+        font-size: 12rem;
+        opacity: 0.08;
+        transform: rotate(-25deg);
         pointer-events: none;
+        z-index: -1;
     }
     .stApp::after {
         content: "🍃";
         position: fixed;
-        bottom: 10%;
-        right: 5%;
-        font-size: 12rem;
-        opacity: 0.03;
-        transform: rotate(20deg);
+        bottom: 5%;
+        right: 3%;
+        font-size: 15rem;
+        opacity: 0.08;
+        transform: rotate(30deg);
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    /* Additional floating leaves for better distribution */
+    .hero-container::before {
+        content: "🌱";
+        position: absolute;
+        top: 0;
+        right: 15%;
+        font-size: 8rem;
+        opacity: 0.06;
+        transform: rotate(15deg);
+        pointer-events: none;
+    }
+    .hero-container::after {
+        content: "🌿";
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        font-size: 9rem;
+        opacity: 0.06;
+        transform: rotate(-10deg);
         pointer-events: none;
     }
 
