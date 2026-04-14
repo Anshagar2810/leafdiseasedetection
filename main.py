@@ -65,6 +65,14 @@ st.markdown("""
         font-family: 'Outfit', sans-serif;
     }
 
+    /* Force all markdown blocks to center their content if they are part of the hero */
+    [data-testid="stMarkdownContainer"] {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
     /* Decorative background patterns */
     .stApp::before {
         content: "🌿";
@@ -96,8 +104,13 @@ st.markdown("""
 
     /* Hero Section - Responsive Font Sizes */
     .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         padding: 4rem 1rem;
+        width: 100%;
         opacity: 0;
         animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
         animation-delay: 2.5s;
@@ -113,23 +126,27 @@ st.markdown("""
         font-weight: 800;
         letter-spacing: -2px;
         text-shadow: 0 10px 20px rgba(46, 125, 50, 0.05);
+        width: 100%;
+        display: block;
     }
 
     .hero-subtitle {
         font-size: clamp(1rem, 2.5vw, 1.4rem);
         color: #455a64;
         max-width: 850px;
-        margin: 0 auto 4rem auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 4rem;
         line-height: 1.8;
         font-weight: 300;
         letter-spacing: 0.5px;
+        display: block;
     }
 
     /* Subtitle text spacing optimization */
     .hero-subtitle br {
         content: "";
-        margin-bottom: 0.5rem;
-        display: block;
+        display: inline;
     }
 
     /* Glass Cards with Responsive Padding */
