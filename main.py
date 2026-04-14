@@ -65,6 +65,28 @@ st.markdown("""
         font-family: 'Outfit', sans-serif;
     }
 
+    /* Decorative background patterns */
+    .stApp::before {
+        content: "🌿";
+        position: fixed;
+        top: 10%;
+        left: 5%;
+        font-size: 10rem;
+        opacity: 0.03;
+        transform: rotate(-15deg);
+        pointer-events: none;
+    }
+    .stApp::after {
+        content: "🍃";
+        position: fixed;
+        bottom: 10%;
+        right: 5%;
+        font-size: 12rem;
+        opacity: 0.03;
+        transform: rotate(20deg);
+        pointer-events: none;
+    }
+
     /* Interactive Cursor (Hidden on Touch Devices) */
     @media (pointer: fine) {
         html, body, [data-testid="stAppViewContainer"] {
@@ -87,18 +109,27 @@ st.markdown("""
         background: linear-gradient(135deg, #1b5e20 0%, #43a047 50%, #81c784 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
         font-weight: 800;
-        letter-spacing: -1px;
+        letter-spacing: -2px;
+        text-shadow: 0 10px 20px rgba(46, 125, 50, 0.05);
     }
 
     .hero-subtitle {
-        font-size: clamp(1rem, 3vw, 1.6rem);
+        font-size: clamp(1rem, 2.5vw, 1.4rem);
         color: #455a64;
-        max-width: 900px;
-        margin: 0 auto 3rem auto;
-        line-height: 1.6;
+        max-width: 850px;
+        margin: 0 auto 4rem auto;
+        line-height: 1.8;
         font-weight: 300;
+        letter-spacing: 0.5px;
+    }
+
+    /* Subtitle text spacing optimization */
+    .hero-subtitle br {
+        content: "";
+        margin-bottom: 0.5rem;
+        display: block;
     }
 
     /* Glass Cards with Responsive Padding */
